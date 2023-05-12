@@ -5,3 +5,74 @@
 File Name: _footer.scss
 Link     : scss/_footer.scss
 */
+.footer{
+    padding-top: 23px;
+    &__inquiry{
+        position: relative;
+        background: rgb(159,14,21);
+        background: linear-gradient(90deg, rgba(159,14,21,1) 0%, rgba(96,15,19,1) 100%);
+        &__left{
+            width: 460px;
+            margin-top: -23px;
+        }
+
+        &__right{
+            padding-bottom: 75px;
+            width: calc(100% - 460px);
+        }
+
+        &::before{
+            @include before(0,0);
+            // background: $color2;
+            top: 0;
+            left: 0;
+            border-left: calc(100vw - 17px) solid transparent;
+            border-right: 0 solid transparent;            
+            border-top: 83px solid $color2;
+        }
+    }
+
+    &__bottom{
+        background: $color1;
+        &-kawamura{
+            padding-right: 40px;
+        }
+        &-left{
+            padding-top: 60px;
+            padding-left: 290px;
+            width: calc(100% - 774px);
+        }
+        &-right{
+            width: 774px;
+            position: relative;
+            &::before{
+                @include before(0,0);
+                border-left: 0 solid transparent;
+                border-right: 200px solid transparent;
+                
+                border-bottom: 430px solid $color1;
+            }
+            
+        }
+
+        &-company{
+            padding-top: 10px;
+        }
+
+        &__copyright{
+            @include setting_text($color2, 15px, 400, 150%, -0.2px);
+            p{
+                padding-right: 25px;
+                border-right: $color2 solid 2px;
+                margin-right: 28px;
+            }
+        }
+
+        &-logo{
+            padding-bottom: 67px;
+            &--kds{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

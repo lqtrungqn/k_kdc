@@ -1,3 +1,71 @@
+.mv{
+    position: relative;
+    &__img{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    &__text{
+        position: relative;
+    }
+
+    &__group{
+        height: 892px;
+        
+    }
+
+    &__news{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: $color2;
+        border-left: $color3 solid 10px;
+        padding: 0 15px 0 50px;
+        width: 843px;
+        height: 100px;
+        &__head{
+            padding-right: 68px;
+        }
+
+        &__content{
+            @include setting_text($color4, 17px, 400, 175%, 0);
+            .date{
+                font-weight: 600;
+                color: $color5;
+                padding-right: 50px;
+            }
+
+            .text{
+                border-bottom: $color4 solid 1px;
+            }
+        }
+
+        &__more{
+            background: $color6;
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #checkdv_1{
     width: 0 !important;
     height: 0 !important;
