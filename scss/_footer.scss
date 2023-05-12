@@ -1,0 +1,76 @@
+/*
+======================
+=    STYLE FOOTER    =
+======================
+File Name: _footer.scss
+Link     : scss/_footer.scss
+*/
+
+.page_voice,.page_home{
+    .gp_foot_cont_address{
+        margin-bottom: -1px;
+    }
+}
+
+.page_application,.page_privacy,.page_work,.page_news_detail{
+    .gp_foot_cont_phone{
+        margin-bottom: -1px;
+    }
+}
+
+.page_home,.page_news_detail{
+
+    .gp_foot_menu li a{
+        top: -1px;
+    }
+}
+
+.page_news_detail{
+    .gp_foot_cont_address p{
+        line-height: 169%;
+    }
+}
+
+.gp_foot{
+    &_menu{
+        background: $color2;
+        height: 88px;
+        li{
+            margin-left: 55px;
+            a{
+                @include setting_text($color3, $fz1, $fw400, $lh175, 0);
+                position: relative;
+                
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+        }    
+    }
+    &_cont{
+        padding: 75px 0 34px;
+        &_address{
+            padding: 20px 0 50px;
+        }
+        &_phone{
+            padding-bottom: 30px;
+            p{
+                color: $color1;
+                padding-top: 4px;
+            }
+            &_fax{
+                padding-left: 65px;
+                position: relative;
+                &::before{
+                    top: 0;
+                    left: 22px;
+                    background: url('../img/icon_01.png') no-repeat;
+                    @include before(17px,36px);
+                }
+            }
+        }
+        &_copyright{
+            color: $color8;
+        }
+    }
+}

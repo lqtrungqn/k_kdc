@@ -1,0 +1,79 @@
+.page_home .tsu_header{
+    background: transparent;
+    &.active{
+        background:$color3;
+    }
+}
+.tsu_header{
+    padding: 20px 25px 20px 1.1979vw;
+    position: fixed;
+    width: 100%;    
+    z-index: 10;
+    background: $color3;
+    
+    &_menu{
+        li{
+            display: inline-flex;
+            align-items: center;
+            margin-left: 55px;
+            position: relative; 
+            &.show_sp{
+                display: none;
+            }
+            a {
+                font-size: $fz1;
+                letter-spacing: 0;
+                font-weight: 400;
+                color: $color1;
+                display: inline-block;
+                line-height: 100%;
+                padding:  11px 5px;
+                position: relative;
+                transition: all 0.35s;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 3px;
+                    background: $color2;
+                    transition: all 0.35s;
+                }
+                &.active,&:hover{
+                    &::before{
+                        width: 60px;
+                    }
+                }
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    &_btn a{
+        background: $color2;
+        color: $color3;
+        font-size: $fz1;
+        font-weight: 500;
+        width: 245px;
+        height: 79px;
+        border-radius: 40px;
+        padding-bottom: 3px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 13px;
+            background-image: url('../img/arrow_right_1.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 32px;
+        }
+    }
+}
+

@@ -1,0 +1,111 @@
+// File Name: _base.scss
+// Link     : assets/scss/_base.scss
+// Desc     : 変数設定セクション | Section for setting variables
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+// Font Famyly
+$f1: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+// Color 
+$color1 : #000000;
+$color2 : #004bb9;
+$color3 : #FFFFFF;
+$color4 : #1a1a1a;
+$color5 : #e8e8e8;
+$color6 : #ffff00;
+$color7 : #f2f2f2;
+$color8 : #808080;
+$color9 : #333333;
+$color10: #4d4d4d;
+$color11: #ededed;
+$color12: rgba(0, 0, 0,0.1);
+$color13: #cccccc;
+$color14: #e5e5e5;
+$color15: #ed1c24;
+$color16: #999999;
+$color17: #29abe2;
+$fz14: 14px;
+$fz15: 15px;
+$fz16: 16px;
+$fz17: 17px;
+$fz1: 18px;
+$fz20: 20px;
+$fz22: 22px;
+$fz23: 23px;
+$fz24: 24px;
+$fz28: 28px;
+$fz32: 32px;
+$fz40: 2.0833vw;
+$fz60: 3.125vw;
+
+
+$fw400: 400;
+$fw500: 500;
+$fw700: 700;
+
+$lh175: 175%;
+
+$lp0: 0;
+$lp1: 1px;
+
+// Width
+$w1545: 1545px;
+
+// Transition
+@mixin transition($val){
+	-webkit-transition: ease all $val;
+	-moz-transition: ease all $val;
+	-ms-transition: ease all $val;
+	-o-transition: ease all $val;
+	transition: ease all $val;
+}
+
+// Text-size-adjust
+@mixin text-size-adjust($val){
+    text-size-adjust: $val;
+    -webkit-text-size-adjust: $val;
+    -moz-text-size-adjust: $val;
+    -ms-text-size-adjust: $val;
+    -o-text-size-adjust: $val;
+}
+
+// opacity: 0.8;
+@mixin opacity($val){
+    opacity: $val;
+}
+
+// setting text
+@mixin setting_text($cl, $fz, $fw, $lh, $lp){
+    color: $cl;
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $lp;
+}
+
+// display:flex;
+@mixin display-flex(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+// display:flex;
+@mixin txt($fz,$fw,$lt,$lh){
+    font-size: $fz;
+    font-weight: $fw;
+    letter-spacing: $lt;
+    line-height: $lh;
+ }
+  
+
+ @mixin before($w,$h){
+    content: "";
+    position: absolute;
+    width: $w;
+    height: $h;
+    z-index: -1;
+ }
+  
+  
+
+ 
