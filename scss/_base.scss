@@ -7,8 +7,8 @@ $f1: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "�
 
 // Color 
 $color1 : #000000;
-$color2 : #004bb9;
-$color3 : #FFFFFF;
+$color2 : #FFFFFF;
+$color3 : #9f0e15;
 $color4 : #1a1a1a;
 $color5 : #e8e8e8;
 $color6 : #ffff00;
@@ -23,32 +23,9 @@ $color14: #e5e5e5;
 $color15: #ed1c24;
 $color16: #999999;
 $color17: #29abe2;
-$fz14: 14px;
-$fz15: 15px;
-$fz16: 16px;
-$fz17: 17px;
-$fz1: 18px;
-$fz20: 20px;
-$fz22: 22px;
-$fz23: 23px;
-$fz24: 24px;
-$fz28: 28px;
-$fz32: 32px;
-$fz40: 2.0833vw;
-$fz60: 3.125vw;
 
 
-$fw400: 400;
-$fw500: 500;
-$fw700: 700;
 
-$lh175: 175%;
-
-$lp0: 0;
-$lp1: 1px;
-
-// Width
-$w1545: 1545px;
 
 // Transition
 @mixin transition($val){
@@ -103,7 +80,7 @@ $w1545: 1545px;
     position: absolute;
     width: $w;
     height: $h;
-    z-index: -1;
+    z-index: 0;
  }
   
   

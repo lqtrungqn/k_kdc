@@ -1,79 +1,103 @@
-.page_home .tsu_header{
-    background: transparent;
-    &.active{
-        background:$color3;
+
+.header{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__left{
+        width: 615px;
+    } 
+
+    &__right{
+        width: calc(100% - 615px);
     }
-}
-.tsu_header{
-    padding: 20px 25px 20px 1.1979vw;
-    position: fixed;
-    width: 100%;    
-    z-index: 10;
-    background: $color3;
+
+
+    &__logo{
+        &-kawamura{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     
-    &_menu{
-        li{
-            display: inline-flex;
-            align-items: center;
-            margin-left: 55px;
-            position: relative; 
-            &.show_sp{
-                display: none;
+        &-kds{
+            margin-left: 191px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background: rgb(159,14,21);
+        background: linear-gradient(90deg, rgba(159,14,21,1) 0%, rgba(96,15,19,1) 100%);
+    
+        &-before{
+            position: relative;
+            &::before{
+                @include before(120px,100px);
+                top: 0;
+                left: 0;
+                background: rgb(159,14,21);
+                background: linear-gradient(90deg, rgba(159,14,21,1) 0%, rgba(96,15,19,1) 100%);
             }
-            a {
-                font-size: $fz1;
-                letter-spacing: 0;
-                font-weight: 400;
-                color: $color1;
-                display: inline-block;
-                line-height: 100%;
-                padding:  11px 5px;
-                position: relative;
-                transition: all 0.35s;
-                &::before{
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 0;
-                    height: 3px;
-                    background: $color2;
-                    transition: all 0.35s;
+        }
+    
+        &-list{
+            display: flex;
+            margin-right: 300px;
+    
+            li{
+                &:not(:last-child){
+                    margin-right: 20px;
                 }
-                &.active,&:hover{
-                    &::before{
-                        width: 60px;
+                a{
+                    position: relative;
+                    height: 94px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    @include setting_text($color2, 19px, 600, 150%, 0);
+                    &::after{
+                        @include before(100%,15px);
+                        left: 0;
+                        bottom: 15px;
+                        background-position: center bottom;
+                        background-repeat: no-repeat;
+                    }
+    
+                    &.active::after,
+                    &:hover::after{
+                        background-image: url('../img/icon_01.svg');
                     }
                 }
             }
-            &:first-child {
-                margin-left: 0;
+        }
+    
+        &-contact{
+            background: $color3;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                background-color: rgba(96,15,19,1);
+            }
+            &--img{
+                margin-right: 15px;
+            }
+            &--txt{
+                @include setting_text($color2, 19px, 600, 150%, 0);
             }
         }
     }
-    &_btn a{
-        background: $color2;
-        color: $color3;
-        font-size: $fz1;
-        font-weight: 500;
-        width: 245px;
-        height: 79px;
-        border-radius: 40px;
-        padding-bottom: 3px;
-        position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            width: 8px;
-            height: 13px;
-            background-image: url('../img/arrow_right_1.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 32px;
-        }
-    }
-}
 
+}
