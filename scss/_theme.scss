@@ -43,8 +43,15 @@
         }
 
         &__more{
+            @include setting_text($color4, 12px, 400, 175%, 0);
+            text-align: center;
             background: $color6;
             height: 100%;
+            display: block;
+            width: 102px;
+            span{
+                display: block;
+            }
         }
     }
 }
